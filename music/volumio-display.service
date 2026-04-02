@@ -1,0 +1,26 @@
+[Unit]
+Description=Volumio Display Service
+Documentation=https://developers.volumio.com/api/websocket-api
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi/music
+ExecStart=/usr/bin/python3 /home/pi/music/volumio_websocket.py
+Restart=on-failure
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=volumio-display
+
+# Security/isolation options (optional, uncomment to enable)
+# NoNewPrivileges=true
+# PrivateTmp=true
+# ProtectHome=true
+# ProtectSystem=strict
+# ReadWritePaths=/home/pi/music
+
+[Install]
+WantedBy=multi-user.target

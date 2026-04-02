@@ -1,0 +1,14 @@
+{
+    "name": "Betelgeuse",
+    "host": "betelgeuse",
+    "width": 320,
+    "height": 64,
+    "x_offset": 0,
+    "y_offset": 0,
+    "color": "00ff00",
+    "font_name": "8x13B.bdf",
+    "layer": 10,
+    "volumio_url": "http://frontspeakers.local:3000",
+    "ft_bin": "~/ft/bin",
+    "ft_fonts": "~/ft/fonts"
+}
